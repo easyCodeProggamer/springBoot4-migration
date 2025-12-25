@@ -1,0 +1,52 @@
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: springboot4-migration-mcp-server
+
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+  ai:
+    mcp:
+      server:
+        name: "myMCPServer"
+        version: 1.0.0
+        enabled: true
+        #protocol: STREAMABLE
+        protocol: STATELESS
+        type: SYNC
+        sse-message-endpoint: /mcp/message
+        request-timeout: 20
+        capabilities:
+          tool: true
+        streamable-http:
+          mcp-endpoint: /mcp
+
+#spring:
+#  application:
+#    name: springboot4-migration-mcp-server
+#  ai:
+#    mcp:
+#      server:
+#        name: "myMCPServer"
+#        version: 1.0.0
+#        enabled: true
+#        type: SYNC
+#        # Use SSE protocol for standard MCP clients (VS Code/Claude)
+#        protocol: SSE
+#
+#        # Configure endpoints (optional if using defaults)
+#        sse-endpoint: /sse
+#        sse-message-endpoint: /mcp/message
+#
+#        capabilities:
+#          tool: true
+
+logging:
+  level:
+    org.springframework.ai.mcp: INFO
+    io.modelcontextprotocol: DEBUG
+

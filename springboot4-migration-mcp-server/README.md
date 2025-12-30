@@ -1,23 +1,20 @@
-# springBoot 4 migration with gitHub copilot
+# Setup MCP server & VS code (copilot)
 
-## Step1: SpringBoot Official Migration Guide
-https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide
+## Step1: Create documentation mcp-service for migration guide
 
-## Step2: Create documentation mcp-service for migration guide
 https://start.spring.io/
+
 https://spring.io/projects/spring-ai#overview
 
 
-## Step3: Download VS code
+## Step2: Download VS code
 https://visualstudio.microsoft.com/free-developer-offers/
 
-Note: I have installed VSCodeUserSetup-x64-1.105.1 in my local
-
-## Step4: configure copilot in your VS code
+## Step3: configure copilot in your VS code
 https://code.visualstudio.com/docs/copilot/overview
 
-## Step5: setup mcp server in VS code
- 
+## Step4: setup mcp server in VS code
+
    ```
    1. ctrl + shift + p
 
@@ -29,4 +26,13 @@ https://code.visualstudio.com/docs/copilot/overview
    
    5. workSpace
 ```
+# Start debugging 
 
+## Step5: Download nodejs
+https://nodejs.org/en
+
+## Step6: In windows CMD fire below command
+
+```
+npx @modelcontextprotocol/inspector
+```
